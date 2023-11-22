@@ -23,7 +23,7 @@ const Pantalla5 = () => {
         <Text style={{color: '#8F8E8E', fontWeight: 'bold', fontSize: 18}}>
             123 Algun lado St., Alguna ciudad
         </Text>
-        <View style={{flexDirection: 'row', marginTop: 20,marginBottom: 20}}>
+
         <View>
         <Text style={{color: 'black', fontWeight: 'bold', fontSize: 17}}>
             Género
@@ -32,7 +32,7 @@ const Pantalla5 = () => {
             Hembra  
         </Text>
         </View>
-        <View style={{left:50}}>
+        <View>
         <Text style={{color: 'black', fontWeight: 'bold', fontSize: 17}}>
             Edad
         </Text>
@@ -40,7 +40,7 @@ const Pantalla5 = () => {
             2 años
         </Text>
         </View>
-        <View style={{left:100}}>
+        <View>
         <Text style={{color: 'black', fontWeight: 'bold', fontSize: 17}}>
             Peso
         </Text>
@@ -48,7 +48,7 @@ const Pantalla5 = () => {
             22 Kg
         </Text>
         </View>
-        </View>
+
         <View>
           <View>
             <Text style={{color: 'black', fontWeight: 'bold', fontSize: 20}}>
