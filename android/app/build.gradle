@@ -1,12 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
 
-project.ext.vectoricons = [
-    iconFontNames: [ 'Ionicons.ttf'] // Name of the font files you want to copy
-]
-
-apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle");
-
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -79,9 +73,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.navegacionapp"
+    namespace "com.mascota_ideal"
     defaultConfig {
-        applicationId "com.navegacionapp"
+        applicationId "com.mascota_ideal"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
