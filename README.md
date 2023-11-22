@@ -15,9 +15,3 @@ Objetivos específicos:
   * Localizar mascotas en lugares aproximados
   * Buscar gente interesada y en condiciones de adoptar mascotas
   * Realizar una evaluación al usuario para ver si es apto de tener una mascota
-
-# npm install
-
-# npm adb devices
-
-# npm run android
