@@ -4,7 +4,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { Platform, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import { Tab1Screen } from '../screens/Tab1Screen';
+import { MenuPrincipalMascotaIdeal } from '../screens/MenuPrincipalMascotaIdeal'; 
 import { Tab2Screen } from '../screens/Tab2Screen';
 import { StackNavigation } from './StackNavigation';
 import { colores } from '../themes/appThemes';
@@ -38,7 +38,7 @@ const TabsAndroid = () => {
 
                 let iconName: string = '';
                 switch (route.name) {
-                    case 'Tab1Screen':
+                    case 'MenuPrincipalMascotaIdeal':
                         iconName = 'boat-outline';
                         break;
                     case 'Tab2Screen':
@@ -56,7 +56,7 @@ const TabsAndroid = () => {
         inactiveColor="#3e2465"
         barStyle={{ backgroundColor: colores.primary }}
     >
-      <BottomTabAndroid.Screen name="Tab1Screen" options={{title: 'Tab1'}} component={Tab1Screen} />
+      <BottomTabAndroid.Screen name="MenuPrincipalMascotaIdeal" options={{title: 'Tab1'}} component={MenuPrincipalMascotaIdeal} />
       <BottomTabAndroid.Screen name="Tab2Screen" options={{title: 'Tab2'}} component={TopTab} />
       <BottomTabAndroid.Screen name="StackNavigation" options={{title: 'Stack'}} component={StackNavigation} />
     </BottomTabAndroid.Navigator>
@@ -86,7 +86,7 @@ const TabsIOS = () =>{
 
                 let iconName: string = '';
                 switch (route.name) {
-                    case 'Tab1Screen':
+                    case 'MenuPrincipalMascotaIdeal':
                         iconName = 'boat-outline';
                         break;
                     case 'Tab2Screen':
@@ -100,7 +100,7 @@ const TabsIOS = () =>{
             }
         })}
     >
-      <BottomTabIOS.Screen name="Tab1Screen" options={{title: 'Tab1'}} component={Tab1Screen} />
+      <BottomTabIOS.Screen name="MenuPrincipalMascotaIdeal" options={{title: 'Tab1'}} component={MenuPrincipalMascotaIdeal} />
       <BottomTabIOS.Screen name="Tab2Screen" options={{title: 'Tab2'}} component={TopTab} />
       <BottomTabIOS.Screen name="StackNavigation" options={{title: 'Stack'}} component={StackNavigation} />
     </BottomTabIOS.Navigator>
