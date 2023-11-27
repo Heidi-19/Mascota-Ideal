@@ -19,7 +19,7 @@ const App = () => {
         {/* <StackNavigation /> */}
         {/* <MenuLateralBasico /> */}
         {/* Principal */}
-       {/* <MenuLateral /> */ }
+       { <MenuLateral /> }
         {/* <FeedScreen /> */}
         {/* <Tabs /> */}
       </AppState>
