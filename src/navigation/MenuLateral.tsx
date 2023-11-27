@@ -62,6 +62,18 @@ const MenuInterno = ({navigation}: DrawerContentComponentProps) => {
                 <Icon name="videocam-outline" size={30} color={colores.primary} />
                 <Text style={styles.menuTexto}> Movies</Text>
           </TouchableOpacity>
+
+
+          <TouchableOpacity style={{
+              ...styles.menuBoton,
+              flexDirection: 'row'
+            }}
+            onPress={() => navigation.navigate('UserProfile')}
+          >
+                <Icon name="person-outline" size={30} color={colores.primary} />
+                <Text style={styles.menuTexto}>Perfil</Text>
+          </TouchableOpacity>
+
           <TouchableOpacity style={{
               ...styles.menuBoton,
               flexDirection: 'row'
