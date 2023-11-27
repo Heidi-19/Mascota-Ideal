@@ -5,7 +5,8 @@ import { Platform, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import { MenuPrincipalMascotaIdeal } from '../screens/MenuPrincipalMascotaIdeal'; 
-import { Tab2Screen } from '../screens/Tab2Screen';
+import { UserProfile } from '../screens/UserProfile';
+//import { Tab2Screen } from '../screens/Tab2Screen';
 import { StackNavigation } from './StackNavigation';
 import { colores } from '../themes/appThemes';
 import { TopTab } from './TopTab';
@@ -44,8 +45,8 @@ const TabsAndroid = () => {
                     case 'Tab2Screen':
                         iconName = 'cash-outline';
                         break;
-                    case 'StackNavigation':
-                        iconName = 'cog-outline';
+                    case 'UserProfile':
+                        iconName = 'perfile-outline';
                         break;
                 }
                 return <Icon name={iconName} size={20} color={colores.primary} />
@@ -57,11 +58,17 @@ const TabsAndroid = () => {
         barStyle={{ backgroundColor: colores.primary }}
     >
       <BottomTabAndroid.Screen name="MenuPrincipalMascotaIdeal" options={{title: 'Tab1'}} component={MenuPrincipalMascotaIdeal} />
-      <BottomTabAndroid.Screen name="Tab2Screen" options={{title: 'Tab2'}} component={TopTab} />
-      <BottomTabAndroid.Screen name="StackNavigation" options={{title: 'Stack'}} component={StackNavigation} />
-    </BottomTabAndroid.Navigator>
+      <BottomTabIOS.Screen name="Tab2Screen" options={{title: 'Tab2'}} component={TopTab} />
+      <BottomTabAndroid.Screen name="UserProfile" options={{ title: 'Profile' }} component={() => <UserProfile user={userObject} />}/>
+     </BottomTabAndroid.Navigator>
   );
 }
+
+const userObject = {
+    username: 'NombreDeUsuario',
+    email: 'correo@ejemplo.com',
+    avatar: 'perfil.jpg',
+  };
 
 //plataforma IOS
 const BottomTabIOS = createBottomTabNavigator();
@@ -90,10 +97,10 @@ const TabsIOS = () =>{
                         iconName = 'boat-outline';
                         break;
                     case 'Tab2Screen':
-                        iconName = 'cash-outline';
-                        break;
-                    case 'StackNavigation':
-                        iconName = 'cog-outline';
+                            iconName = 'cash-outline';
+                            break;
+                    case 'UserProfile':
+                        iconName = 'person-outline';
                         break;
                 }
                 return <Icon name={iconName} size={20} color={colores.primary} />
@@ -102,7 +109,7 @@ const TabsIOS = () =>{
     >
       <BottomTabIOS.Screen name="MenuPrincipalMascotaIdeal" options={{title: 'Tab1'}} component={MenuPrincipalMascotaIdeal} />
       <BottomTabIOS.Screen name="Tab2Screen" options={{title: 'Tab2'}} component={TopTab} />
-      <BottomTabIOS.Screen name="StackNavigation" options={{title: 'Stack'}} component={StackNavigation} />
+      <BottomTabAndroid.Screen name="UserProfile" options={{ title: 'Profile' }} component={() => <UserProfile user={userObject} />}/>
     </BottomTabIOS.Navigator>
   );
 }

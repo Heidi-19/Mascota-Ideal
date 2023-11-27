@@ -9,6 +9,7 @@ interface User {
   avatar: string;
 }
 
+
 interface UserProfileProps {
   user: User;
 }
@@ -16,7 +17,7 @@ interface UserProfileProps {
 export const UserProfile: React.FC<UserProfileProps> = ({ user }) => {
   return (
     <View style={styles.container}>
-      <Image source={{ uri: user.avatar }} style={styles.avatar} />
+      <Image source={require('../assets/perfil.jpg')} style={styles.avatar} />
       <Text style={styles.username}>{user.username}</Text>
       <Text style={styles.email}>{user.email}</Text>
       <TouchableOpacity style={styles.button}>
