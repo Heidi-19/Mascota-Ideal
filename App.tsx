@@ -8,7 +8,7 @@ import { MenuLateral } from './src/navigation/MenuLateral';
 import { Tabs } from './src/navigation/Tabs';
 import { AuthProvider } from './src/context/AuthContext';
 import { FeedScreen } from './src/screens/FeedScreen';
-
+//import {UserProfile} from './src/screens/UserProfile';
 
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
         {/* <StackNavigation /> */}
         {/* <MenuLateralBasico /> */}
         {/* Principal */}
-        <MenuLateral /> 
+       {/* <MenuLateral /> */ }
         {/* <FeedScreen /> */}
         {/* <Tabs /> */}
       </AppState>
