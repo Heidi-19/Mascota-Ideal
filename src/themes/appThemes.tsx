@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle *//* eslint-disable prettier/prettier */
 import { StyleSheet } from "react-native";
 
 export const colores = {
@@ -6,7 +7,7 @@ export const colores = {
 
 export const styles = StyleSheet.create({
     marginGlobal:{
-        marginHorizontal: 20
+        marginHorizontal: 50
     },
     title: {
         fontSize: 30,
