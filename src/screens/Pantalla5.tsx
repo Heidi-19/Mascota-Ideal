@@ -32,6 +32,7 @@ const Pantalla5 = () => {
             Hembra  
         </Text>
         </View>
+        <View>
         <View style={{left:50}}>
         <Text style={{color: 'black', fontWeight: 'bold', fontSize: 17}}>
             Edad
@@ -40,6 +41,7 @@ const Pantalla5 = () => {
             2 años
         </Text>
         </View>
+        <View>
         <View style={{left:100}}>
         <Text style={{color: 'black', fontWeight: 'bold', fontSize: 17}}>
             Peso

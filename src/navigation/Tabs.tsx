@@ -1,11 +1,12 @@
 /* eslint-disable prettier/prettier */
-
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { Platform, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+import { Tab1Screen } from '../screens/Tab1Screen';
+import { Tab2Screen } from '../screens/Tab2Screen';
 import { MenuPrincipalMascotaIdeal } from '../screens/MenuPrincipalMascotaIdeal'; 
 import { UserProfile } from '../screens/UserProfile';
 //import { Tab2Screen } from '../screens/Tab2Screen';
@@ -41,12 +42,15 @@ const TabsAndroid = () => {
 
                 let iconName: string = '';
                 switch (route.name) {
+                    case 'Tab1Screen':
                     case 'MenuPrincipalMascotaIdeal':
                         iconName = 'boat-outline';
                         break;
                     case 'Tab2Screen':
                         iconName = 'cash-outline';
                         break;
+                    case 'StackNavigation':
+                        iconName = 'cog-outline';
                     case 'UserProfile':
                         iconName = 'perfile-outline';
                         break;
@@ -59,6 +63,12 @@ const TabsAndroid = () => {
         inactiveColor="#3e2465"
         barStyle={{ backgroundColor: colores.primary }}
     >
+      <BottomTabAndroid.Screen name="Tab1Screen" options={{title: 'Tab1'}} component={Tab1Screen} />
+      <BottomTabAndroid.Screen name="Tab2Screen" options={{title: 'Tab2'}} component={TopTab} />
+      <BottomTabAndroid.Screen name="StackNavigation" options={{title: 'Stack'}} component={StackNavigation} />
+    </BottomTabAndroid.Navigator>
+  );
+}
       <BottomTabAndroid.Screen name="MenuPrincipalMascotaIdeal" options={{title: 'Tab1'}} component={MenuPrincipalMascotaIdeal} />
       <BottomTabIOS.Screen name="Tab2Screen" options={{title: 'Tab2'}} component={TopTab} />
       <BottomTabAndroid.Screen name="UserProfile" options={{ title: 'Profile' }} component={() => <UserProfile user={userObject} />}/>
@@ -95,6 +105,15 @@ const TabsIOS = () =>{
 
                 let iconName: string = '';
                 switch (route.name) {
+
+                    case 'Tab1Screen':
+                        iconName = 'boat-outline';
+                        break;
+                    case 'Tab2Screen':
+                        iconName = 'cash-outline';
+                        break;
+                    case 'StackNavigation':
+                        iconName = 'cog-outline';
                     case 'MenuPrincipalMascotaIdeal':
                         iconName = 'boat-outline';
                         break;
@@ -109,6 +128,9 @@ const TabsIOS = () =>{
             }
         })}
     >
+      <BottomTabIOS.Screen name="Tab1Screen" options={{title: 'Tab1'}} component={Tab1Screen} />
+      <BottomTabIOS.Screen name="Tab2Screen" options={{title: 'Tab2'}} component={TopTab} />
+      <BottomTabIOS.Screen name="StackNavigation" options={{title: 'Stack'}} component={StackNavigation} />
       <BottomTabIOS.Screen name="MenuPrincipalMascotaIdeal" options={{title: 'Tab1'}} component={MenuPrincipalMascotaIdeal} />
       <BottomTabIOS.Screen name="Tab2Screen" options={{title: 'Tab2'}} component={TopTab} />
       <BottomTabAndroid.Screen name="UserProfile" options={{ title: 'Profile' }} component={() => <UserProfile user={userObject} />}/>

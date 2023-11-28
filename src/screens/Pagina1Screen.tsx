@@ -1,4 +1,5 @@
 /* eslint-disable no-trailing-spaces *//* eslint-disable prettier/prettier */
+
 import { StackScreenProps } from '@react-navigation/stack';
 import React, { useEffect } from 'react'
 import { View, Text, Button, TouchableOpacity } from 'react-native';
