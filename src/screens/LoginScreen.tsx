@@ -1,5 +1,3 @@
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable prettier/prettier */
 /* eslint-disable no-trailing-spaces *//* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert } from 'react-native';
@@ -23,12 +21,6 @@ const LoginScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-      <Text style={styles.headerText}>Biemvenido a Mascota Ideal</Text>
-        <Image
-          style={styles.logo}
-          source={require('https://eurofarma.com.br/storage/files/shutterstock_1625572492_611fa7b38eb42.jpg')} 
     <View >
       <View style={styles.header}>
       <Text style={styles.headerText}>Bienvenido a Mascota Ideal</Text>
@@ -64,31 +56,6 @@ const LoginScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    backgroundColor: '#5DA1DE',
-    paddingTop: 20,
-  },
-  header: {
-    alignItems: 'center',
-  },
-  logo: {
-    width: 80, 
-    height: 100,
-  },
-  headerText: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginTop: 10,
-    color: '#fff',
-  },
-  box: {
-    width: '80%',
-    padding: 20,
-    borderRadius: 10,
-    backgroundColor: '#F2F2F2',  
   header: {
     marginTop: 30,
     alignItems: 'center',
@@ -121,8 +88,6 @@ const styles = StyleSheet.create({
   },
   input: {
     width: '100%',
-    height: 40,
-    borderColor: 'gray',
     height: 50,
     borderColor: '#7A6ABA',
     borderWidth: 1,
@@ -131,8 +96,6 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   button: {
-    backgroundColor: '#007BFF',
-    padding: 10,
     backgroundColor: '#7A6ABA',
     padding: 20,
     borderRadius: 5,
@@ -140,7 +103,6 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#fff',
-    fontSize: 16,
     fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
@@ -157,6 +119,4 @@ const styles = StyleSheet.create({
   },
 });
 
-
 export default LoginScreen;
-

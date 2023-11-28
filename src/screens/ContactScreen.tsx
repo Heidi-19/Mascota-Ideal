@@ -4,7 +4,8 @@ import React, { useContext } from 'react'
 import { View, Text, Button } from 'react-native';
 import { styles } from '../themes/appThemes';
 import { AuthContext } from '../context/AuthContext';
-export const ContactScreen = () => {
+import LoginScreen from './LoginScreen';
+/*export const ContactScreen = () => {
 
   const {signIn, authState} = useContext(AuthContext)
 
@@ -17,7 +18,9 @@ export const ContactScreen = () => {
         }
         
     </View>
-import LoginScreen from './LoginScreen';
+  );
+      };
+import LoginScreen from './LoginScreen';*/
 
 export const ContactScreen = () => {
 
@@ -26,9 +29,7 @@ export const ContactScreen = () => {
   return (
     //<View >
       <View>
-        <LoginScreen>
-          
-        </LoginScreen>
+        <LoginScreen />
       </View>
       
 
