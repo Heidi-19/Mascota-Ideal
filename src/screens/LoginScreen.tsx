@@ -1,5 +1,6 @@
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable prettier/prettier */
+/* eslint-disable no-trailing-spaces *//* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert } from 'react-native';
 
@@ -28,6 +29,12 @@ const LoginScreen = () => {
         <Image
           style={styles.logo}
           source={require('https://eurofarma.com.br/storage/files/shutterstock_1625572492_611fa7b38eb42.jpg')} 
+    <View >
+      <View style={styles.header}>
+      <Text style={styles.headerText}>Bienvenido a Mascota Ideal</Text>
+        <Image
+          style={styles.logo}
+          source={require('../assets/logocat-dog.jpg')} 
         />
       </View>
       <View style={styles.box}>
@@ -81,11 +88,33 @@ const styles = StyleSheet.create({
     width: '80%',
     padding: 20,
     borderRadius: 10,
-    backgroundColor: '#F2F2F2',
+    backgroundColor: '#F2F2F2',  
+  header: {
+    marginTop: 30,
+    alignItems: 'center',
+  },
+  logo: {
+    borderRadius: 100,
+    width: 250, 
+    height: 200,
+  },
+  headerText: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    marginTop: 10,
+    color: '#7A6ABA',
+  },
+  box: {
+    
+    width: '90%',
+    padding: 20,
+    borderRadius: 10,
+    backgroundColor: '#fff',
     alignItems: 'center',
     marginTop: 20,
   },
   title: {
+    color: '#7A6ABA',
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
@@ -94,6 +123,8 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 40,
     borderColor: 'gray',
+    height: 50,
+    borderColor: '#7A6ABA',
     borderWidth: 1,
     borderRadius: 5,
     marginBottom: 10,
@@ -102,16 +133,20 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: '#007BFF',
     padding: 10,
+    backgroundColor: '#7A6ABA',
+    padding: 20,
     borderRadius: 5,
     width: '100%',
   },
   buttonText: {
     color: '#fff',
     fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
   },
   createAccountText: {
+    color: '#7A6ABA',
     fontSize: 16,
     textAlign: 'center',
   },
@@ -122,4 +157,6 @@ const styles = StyleSheet.create({
   },
 });
 
+
 export default LoginScreen;
+
