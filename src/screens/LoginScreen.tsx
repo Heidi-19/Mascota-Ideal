@@ -39,13 +39,13 @@ const LoginScreen = ({navigation}: Props) => {
         <TextInput
           style={styles.input}
           placeholderTextColor='black'
-          underlineColorAndroid='black'
           placeholder="Usuario"
           onChangeText={(text) => setUsername(text)}
           value={username}
         />
         <TextInput
           style={styles.input}
+          placeholderTextColor='black'
           placeholder="Contraseña"
           onChangeText={(text) => setPassword(text)}
           value={password}
@@ -54,7 +54,7 @@ const LoginScreen = ({navigation}: Props) => {
         <TouchableOpacity style={styles.button} onPress={handleLogin}>
           <Text style={styles.buttonText}>Iniciar Sesión</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.createAccountLink}  onPress = {() => navigation.navigate('Pagina3Screen')}>
+        <TouchableOpacity style={styles.createAccountLink}  onPress = {() => navigation.navigate('AlbumsScreen')}>
           <Text style={styles.createAccountText}>¿No tienes una cuenta? Crear cuenta</Text>
         </TouchableOpacity>
       </View>

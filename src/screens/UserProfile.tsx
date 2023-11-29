@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+
 // UserProfile.tsx
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
@@ -39,6 +41,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   username: {
+    color: 'black',
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 5,

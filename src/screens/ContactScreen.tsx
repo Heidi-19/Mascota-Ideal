@@ -1,10 +1,11 @@
-
 /* eslint-disable no-trailing-spaces *//* eslint-disable prettier/prettier */
-import React, { useContext } from 'react'
-import { View, Text, Button } from 'react-native';
-import { styles } from '../themes/appThemes';
-import { AuthContext } from '../context/AuthContext';
+//import React, { useContext } from 'react'
+import { View } from 'react-native';
+//import { styles } from '../themes/appThemes';
+//import { AuthContext } from '../context/AuthContext';
 import LoginScreen from './LoginScreen';
+import { Pagina2Screen } from './Pagina2Screen';
+import { Pagina3Screen } from './Pagina3Screen';
 /*export const ContactScreen = () => {
 
   const {signIn, authState} = useContext(AuthContext)
@@ -30,6 +31,7 @@ export const ContactScreen = () => {
     //<View >
       <View>
         <LoginScreen />
+        
       </View>
       
 

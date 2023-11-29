@@ -7,9 +7,10 @@ export const colores = {
 
 export const styles = StyleSheet.create({
     marginGlobal:{
-        marginHorizontal: 50
+        marginHorizontal: 30
     },
     title: {
+        color: 'black',
         fontSize: 30,
         marginBottom: 10
     },
