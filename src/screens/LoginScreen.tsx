@@ -1,8 +1,12 @@
 /* eslint-disable no-trailing-spaces *//* eslint-disable prettier/prettier */
+import { StackScreenProps } from '@react-navigation/stack';
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert } from 'react-native';
+//import { black } from 'react-native-paper/lib/typescript/styles/themes/v2/colors';
 
-const LoginScreen = () => {
+interface Props extends StackScreenProps<any, any>{};
+
+const LoginScreen = ({navigation}: Props) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -15,13 +19,14 @@ const LoginScreen = () => {
     }
   };
 
-  const handleCreateAccount = () => {
+  //const handleCreateAccount = () => {
     // Acción cuando se presiona "Crear cuenta"
-    Alert.alert('Crear cuenta presionado');
-  };
+    //Alert.alert('Crear cuenta presionado');
+    
+  //};
 
   return (
-    <View >
+    <View style={styles.container}>
       <View style={styles.header}>
       <Text style={styles.headerText}>Bienvenido a Mascota Ideal</Text>
         <Image
@@ -33,6 +38,8 @@ const LoginScreen = () => {
         <Text style={styles.title}>Inicio de Sesión</Text>
         <TextInput
           style={styles.input}
+          placeholderTextColor='black'
+          underlineColorAndroid='black'
           placeholder="Usuario"
           onChangeText={(text) => setUsername(text)}
           value={username}
@@ -47,22 +54,30 @@ const LoginScreen = () => {
         <TouchableOpacity style={styles.button} onPress={handleLogin}>
           <Text style={styles.buttonText}>Iniciar Sesión</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.createAccountLink} onPress={handleCreateAccount}>
+        <TouchableOpacity style={styles.createAccountLink}  onPress = {() => navigation.navigate('Pagina3Screen')}>
           <Text style={styles.createAccountText}>¿No tienes una cuenta? Crear cuenta</Text>
         </TouchableOpacity>
       </View>
     </View>
+    
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    backgroundColor: 'white',
+  },
+
   header: {
     marginTop: 30,
     alignItems: 'center',
   },
+
   logo: {
-    borderRadius: 100,
-    width: 250, 
+    borderRadius: 1000,
+    width: 200, 
     height: 200,
   },
   headerText: {
@@ -72,13 +87,11 @@ const styles = StyleSheet.create({
     color: '#7A6ABA',
   },
   box: {
-    
     width: '90%',
     padding: 20,
     borderRadius: 10,
-    backgroundColor: '#fff',
+    backgroundColor: 'rgba(0,0,0,0)',
     alignItems: 'center',
-    marginTop: 20,
   },
   title: {
     color: '#7A6ABA',
@@ -87,6 +100,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   input: {
+    color: 'black',
     width: '100%',
     height: 50,
     borderColor: '#7A6ABA',
