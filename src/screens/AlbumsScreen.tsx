@@ -6,7 +6,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 export const AlbumsScreen = () => {
   const handlemascota = () => {
-    //Acción cuando se presiona "Crear cuenta"
+    //Acción cuando se presiona "Iniciar Sesion"
    Alert.alert('Bienvenido');
    
  };
@@ -98,6 +98,7 @@ const styles = StyleSheet.create({
    marginBottom: 20,
  },
  input: {
+   flex:1,
    color: 'black',
    width: '100%',
    height: 50,

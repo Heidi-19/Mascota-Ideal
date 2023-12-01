@@ -7,8 +7,10 @@ import { Pagina3Screen } from '../screens/Pagina3Screen';
 import { PersonaScreen } from '../screens/PersonaScreen';
 import LoginScreen from '../screens/LoginScreen';
 import { AlbumsScreen } from '../screens/AlbumsScreen';
+import { ChatScreen } from '../screens/ChatScreen';
 
 export type RootStackParam ={
+  ChatScreen: undefined,
   AlbumsScreen: undefined,
   LoginScreen: undefined,
   Pagina1Screen: undefined,
@@ -34,6 +36,7 @@ export const StackNavigation = () => {
       }}
     >
       <Stack.Screen name="LoginScreen" options={{title:'login'}} component={LoginScreen} />
+      <Stack.Screen name='ChatScreen' options={{title:'CrearCuenta'}} component={ChatScreen} />
       <Stack.Screen name="AlbumsScreen" options={{title:'registro'}} component={AlbumsScreen} />
       <Stack.Screen name="Pagina1Screen" options={{title:'Página 1'}} component={Pagina1Screen} />
       <Stack.Screen name="Pagina2Screen" options={{title:'Página 2'}} component={Pagina2Screen} />

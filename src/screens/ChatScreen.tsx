@@ -4,7 +4,7 @@ import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 
 export const ChatScreen = () => {
 const handlemascota = () => {
-     //Acción cuando se presiona "Crear cuenta"
+     //Acción cuando se presiona "Agregar Mascota"
     Alert.alert('Mascota agregada');
     
   };
@@ -62,7 +62,6 @@ const handlemascota = () => {
            placeholderTextColor='black'
            placeholder="Disponibilidad"
          />
-         
          <TouchableOpacity style={styles.button} onPress={handlemascota}>
            <Text style={styles.buttonText}>Agregar mascota</Text>
          </TouchableOpacity>
@@ -78,7 +77,6 @@ const handlemascota = () => {
      alignItems: 'center',
      backgroundColor: 'white',
    },
-  
    header: {
      marginTop: 30,
      alignItems: 'center',

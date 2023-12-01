@@ -52,7 +52,7 @@ const TabsAndroid = () => {
                         case 'StackNavigation':
                             iconName = 'cog-outline';
                         case 'UserProfile':
-                            iconName = 'perfile-outline';
+                            iconName = 'profile-outline';
                             break;
                     }
                     return <Icon name={iconName} size={20} color={colores.primary} />
