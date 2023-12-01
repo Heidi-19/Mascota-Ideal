@@ -1,10 +1,15 @@
 /* eslint-disable prettier/prettier */
 import React from 'react'
-import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 //import { styles } from '../themes/appThemes';
 
 export const AlbumsScreen = () => {
+  const handlemascota = () => {
+    //Acción cuando se presiona "Crear cuenta"
+   Alert.alert('Bienvenido');
+   
+ };
   return (
     <ScrollView>
      <View style={styles.container}>
@@ -16,7 +21,7 @@ export const AlbumsScreen = () => {
        />
      </View>
      <View style={styles.box}>
-       <Text style={styles.title}>Formulario de registro</Text>
+       <Text style={styles.title}>Crea una nueva cuenta</Text>
        <TextInput
          style={styles.input}
          placeholderTextColor='black'
@@ -47,7 +52,7 @@ export const AlbumsScreen = () => {
          placeholderTextColor='black'
          placeholder="Direccion"
        />
-       <TouchableOpacity style={styles.button}>
+       <TouchableOpacity style={styles.button} onPress={handlemascota}>
          <Text style={styles.buttonText}>Registrarse</Text>
        </TouchableOpacity>
      </View>
