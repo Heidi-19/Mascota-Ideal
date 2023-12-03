@@ -23,6 +23,7 @@ export const MenuPrincipalMascotaIdeal = () => {
       </View>
 
       {/* Deslizador horizontal */}
+
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.horizontalSlider}>
         <TouchableOpacity style={styles.horizontalButton}>
           <Image source={require('../assets/mascotas.jpg')} style={styles.buttonImage} />
@@ -56,42 +57,43 @@ export const MenuPrincipalMascotaIdeal = () => {
           <Text style={styles.categoryButtonText}>Conejos</Text>
         </TouchableOpacity>
 
-    </View>
+      </View>
 
       <View style={styles.container}>
-      {/* Deslizador vertical de mascotas */}
-      <ScrollView style={styles.verticalSlider}>
-        <View style={styles.row}>
-          <TouchableOpacity style={styles.petImageContainer}>
-          <View style={styles.innerPetImageContainer}>
-            <Image source={require('../assets/cat1.png')} style={styles.petImage} />
-            </View>
-            <Text style={styles.petDescription}>Heidi</Text>
-          </TouchableOpacity>
+        {/* Deslizador vertical de mascotas */}
+        <ScrollView style={styles.verticalSlider}>
+          <View style={styles.row}>
+            <TouchableOpacity style={styles.petImageContainer}>
+              <View style={styles.innerPetImageContainer}>
+                <Image source={require('../assets/cat1.png')} style={styles.petImage} />
+              </View>
+              <Text style={styles.petDescription}>Heidi</Text>
+            </TouchableOpacity>
 
-          <TouchableOpacity style={styles.petImageContainer}>
-          <View style={styles.innerPetImageContainer}>
-            <Image source={require('../assets/cat2.png')} style={styles.petImage} />
-            </View>
-            <Text style={styles.petDescription}>Pablo</Text>
-          </TouchableOpacity>
-        </View>
+            <TouchableOpacity style={styles.petImageContainer}>
+              <View style={styles.innerPetImageContainer}>
+                <Image source={require('../assets/cat2.png')} style={styles.petImage} />
+              </View>
+              <Text style={styles.petDescription}>Pablo</Text>
+            </TouchableOpacity>
+          </View>
 
-        <View style={styles.row}>
-          <TouchableOpacity style={styles.petImageContainer}>
-          <View style={styles.innerPetImageContainer}>
-            <Image source={require('../assets/cat3.png')} style={styles.petImage} />
-            </View>
-            <Text style={styles.petDescription}>Nieve</Text>
-          </TouchableOpacity>
+          <View style={styles.row}>
+            <TouchableOpacity style={styles.petImageContainer}>
+              <View style={styles.innerPetImageContainer}>
+                <Image source={require('../assets/cat3.png')} style={styles.petImage} />
+              </View>
+              <Text style={styles.petDescription}>Nieve</Text>
+            </TouchableOpacity>
 
-          {/* Agrega más botones de mascotas según sea necesario */}
-        </View>
+            {/* Agrega más botones de mascotas según sea necesario */}
+          </View>
 
-        {/* Agrega más filas según sea necesario */}
-      </ScrollView>
+          {/* Agrega más filas según sea necesario */}
+        </ScrollView>
+      </View>
     </View>
-    </View>
+
   );
 };
 
@@ -102,7 +104,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     padding: 16,
     backgroundColor: '#F6F6FE',
-    minHeight: 150, 
+    minHeight: 150,
   },
   header: {
     flexDirection: 'row',
@@ -186,7 +188,7 @@ export const styles = StyleSheet.create({
     backgroundColor: '#E2E2E2', // Fondo blanco
     borderRadius: 8,
     overflow: 'hidden',
-    flex: 1, 
+    flex: 1,
     margin: 5, // Margen para hacerlo más pequeño que el contenedor externo
   },
   categoryButton: {

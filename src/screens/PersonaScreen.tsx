@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, { useContext, useEffect } from 'react'
 import { View, Text } from 'react-native';
 import { styles } from '../themes/appThemes';
