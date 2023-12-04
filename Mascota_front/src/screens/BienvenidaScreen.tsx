@@ -39,18 +39,15 @@ const BienvenidaScreen: React.FC<BienvenidaProps> = ({ navigation }) => {
         </Text>
       </View>
 
-     
-
       <TouchableOpacity
         onPress={() => navigation.navigate('CrearCuenta')}>
-          
           <View style={styles.button}>
           <Text style={styles.buttonText} >Crear Cuenta</Text>
         </View>
         <View style={ { marginVertical: 8 } }/>
         </TouchableOpacity >
         <Text style={styles.text} 
-        onPress={() => navigation.navigate('Login')}> Si ya tienes cuenta da clic aqui para<Text style={{ textDecorationLine: 'underline', color:'black' }}>iniciar sesion</Text>
+        onPress={() => navigation.navigate('Login')}> Si ya tienes cuenta da clic aqui para<Text style={{ textDecorationLine: 'underline', color:'black' }}>Iniciar sesion</Text>
         </Text>
     </View>
   </SafeAreaView>

@@ -1,7 +1,7 @@
 /* eslint-disable react/self-closing-comp *//* eslint-disable prettier/prettier */
 import React from 'react'
 import { Button,Text, View } from 'react-native'
-import { StackNavigationProp } from '@react-navigation/stack';
+
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 
 interface Pagina1Props {
