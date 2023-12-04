@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
 import { Image, 
   SafeAreaView, 
@@ -7,9 +8,15 @@ import { Image,
   TouchableOpacity, 
   View 
 } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
-const BienvenidaScreen = () => {
+interface BienvenidaProps {
+  navigation: StackNavigationProp<any, 'BienvenidaScreen'>;
+}
+
+const BienvenidaScreen: React.FC<BienvenidaProps> = ({ navigation }) => {
   return(
+    <ScrollView>
     <SafeAreaView style={styles.container}>
     <View style={styles.hero}>
       <Image
@@ -35,31 +42,31 @@ const BienvenidaScreen = () => {
      
 
       <TouchableOpacity
-        onPress={() => {
-          // handle onPress
-        }}>
+        onPress={() => navigation.navigate('CrearCuenta')}>
+          
           <View style={styles.button}>
-          <Text style={styles.buttonText}>Crear Cuenta</Text>
+          <Text style={styles.buttonText} >Crear Cuenta</Text>
         </View>
-        </TouchableOpacity>
-
         <View style={ { marginVertical: 8 } }/>
-        <TouchableOpacity
-        onPress={() => {
-          // handle onPress
-        }}>
-        <View style={styles.button}>
-          <Text style={styles.buttonText}>Iniciar Sesión</Text>
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity >
+        <Text style={styles.text} 
+        onPress={() => navigation.navigate('Login')}> Si ya tienes cuenta da clic aqui para<Text style={{ textDecorationLine: 'underline', color:'black' }}>iniciar sesion</Text>
+        </Text>
     </View>
   </SafeAreaView>
+  </ScrollView>
   )
 }
 
 
 
 const styles = StyleSheet.create({
+  subtitle: {
+    alignContent:'center',
+    fontSize: 15,
+    fontWeight: '500',
+    color: '#929292',
+},
     container: {
       backgroundColor:'#d8dffe',
     },
@@ -111,7 +118,7 @@ const styles = StyleSheet.create({
       color: '#9992a7',
       textAlign: 'center',
       //distancia entre el texto y los botones
-      paddingBottom: 40,
+      paddingBottom: 10,
     },
     button: {
       backgroundColor: '#56409e',

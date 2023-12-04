@@ -1,28 +1,19 @@
 /* eslint-disable no-trailing-spaces *//* eslint-disable prettier/prettier */
 //import { StackScreenProps } from '@react-navigation/stack';
+import { StackNavigationProp } from '@react-navigation/stack';
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet } from 'react-native';
 //import { black } from 'react-native-paper/lib/typescript/styles/themes/v2/colors';
 
+interface LoginProps {
+  navigation: StackNavigationProp<any, 'Login'>;
+}
 
-const LoginScreen = () => {
+const LoginScreen: React.FC<LoginProps> = ({ navigation }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    // Lógica de autenticación
-    if (username === 'usuario' && password === 'contraseña') {
-      Alert.alert('Inicio de sesión exitoso');
-    } else {
-      Alert.alert('Inicio de sesión fallido');
-    }
-  };
 
-  const handleCreateAccount = () => {
-     //Acción cuando se presiona "Crear cuenta"
-    Alert.alert('Crear cuenta presionado');
-    
-  };
 
   return (
     <View style={styles.container}>
@@ -50,10 +41,12 @@ const LoginScreen = () => {
           value={password}
           secureTextEntry
         />
-        <TouchableOpacity style={styles.button} onPress={handleLogin}>
+        <TouchableOpacity style={styles.button}
+        onPress={() => navigation.navigate('Principal')}>
           <Text style={styles.buttonText}>Iniciar Sesión</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.createAccountLink}  onPress = {handleCreateAccount}>
+        <TouchableOpacity style={styles.createAccountLink}  
+        onPress={() => navigation.navigate('CrearCuenta')}>
           <Text style={styles.createAccountText}>¿No tienes una cuenta? Crear cuenta</Text>
         </TouchableOpacity>
       </View>
@@ -64,9 +57,7 @@ const LoginScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    //corregir el padding
-    paddingBottom:200,
-    paddingTop:10,
+    flex:1,
     justifyContent: 'flex-start',
     alignItems: 'center',
     backgroundColor: 'white',

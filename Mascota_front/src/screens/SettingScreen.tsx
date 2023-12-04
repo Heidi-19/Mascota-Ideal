@@ -1,7 +1,9 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react'
-import { Image, SafeAreaView, ScrollView, StyleSheet, Switch, Text, TouchableOpacity, View } from 'react-native'
+import { Button, Image, SafeAreaView, ScrollView, StyleSheet, Switch, Text, TouchableOpacity, View } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
+import { StackNavigationProp } from '@react-navigation/stack';
 
 
 const SECTIONS = [
@@ -29,7 +31,7 @@ const SECTIONS = [
     },
 ];
 
-export const SettingsScreen = () => {
+export const SettingsScreen: React.FC = ({ }) => {
     const [form, setForm] = useState({
         language: 'Español',
         darkMode: true,
@@ -41,6 +43,10 @@ export const SettingsScreen = () => {
             <ScrollView contentContainerStyle={styles.container}>
                 <View style={styles.header}>
                     <Text style={styles.title}>Ajustes</Text>
+                    <Button
+        title="Abrir Drawer"
+        onPress={() => navigation.openDrawer()}
+      />
                     <Text style={styles.subtitle}> Actualiza tus preferencias</Text>
                 </View>
 

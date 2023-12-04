@@ -1,16 +1,15 @@
 /* eslint-disable prettier/prettier */
+import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react'
-import { Alert, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 
 //import { styles } from '../themes/appThemes';
 
+interface CrearCuentaProps {
+    navigation: StackNavigationProp<any, 'Crear Cuenta'>;
+  }
 
-export const CrearCuentaScreen = () => {
-    const handlemascota = () => {
-        //Acción cuando se presiona "Iniciar Sesion"
-        Alert.alert('Bienvenido');
-
-    };
+export const CrearCuentaScreen: React.FC<CrearCuentaProps> = ({ navigation }) => {
     return (
         <ScrollView>
             <View style={styles.container}>
@@ -53,8 +52,9 @@ export const CrearCuentaScreen = () => {
                         placeholderTextColor='black'
                         placeholder="Direccion"
                     />
-                    <TouchableOpacity style={styles.button} onPress={handlemascota}>
-                        <Text style={styles.buttonText}>Registrarse</Text>
+                    <TouchableOpacity style={styles.button}>
+                        <Text style={styles.buttonText}
+                         onPress={() => navigation.navigate('Principal')}>Registrarse</Text>
                     </TouchableOpacity>
                 </View>
             </View>

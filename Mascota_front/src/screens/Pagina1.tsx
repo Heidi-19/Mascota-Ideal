@@ -1,10 +1,21 @@
 /* eslint-disable react/self-closing-comp *//* eslint-disable prettier/prettier */
 import React from 'react'
-import { Alert, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Button,Text, View } from 'react-native'
+import { StackNavigationProp } from '@react-navigation/stack';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
 
-
-export const Pagina1 = () => {
-    return (
-       <Text >Hola</Text>
-    )
+interface Pagina1Props {
+    navigation: DrawerNavigationProp<any, 'Pagina1'>;
 }
+
+export const Pagina1: React.FC<Pagina1Props> = ({ navigation }) => {
+    return (
+        <View>
+            <Text>Screen A</Text>
+            <Button
+                title="Open Drawer"
+                onPress={() => navigation.navigate('Settings')}
+            />
+        </View>
+    );
+};
