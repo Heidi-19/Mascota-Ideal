@@ -40,8 +40,14 @@ const corsOptions = {
 };
 
 const app = express();
+
 app.use(express.json());
 app.use(cors(corsOptions));
+
+app.use(express.urlencoded({
+    extended: true
+}))
+
 
 //mostrar mascota por ID
 app.get("/mascota/:idMascota", async(req, res) => {
@@ -238,7 +244,7 @@ app.delete("/sesion/:idSesion", async (req, res) => {
 });
 
 //Crear rol
-app.post("/roles", async (req, res) => {
+app.post("/rol", async (req, res) => {
     const nuevoRol = req.body; // Suponiendo que los datos del nuevo rol están en el cuerpo de la solicitud
     
     try {
@@ -251,7 +257,7 @@ app.post("/roles", async (req, res) => {
 });
 
 //Obtener un rol por ID
-app.get("/roles/:idRol", async (req, res) => {
+app.get("/rol/:idRol", async (req, res) => {
     const idRol = req.params.idRol;
     
     try {
@@ -268,7 +274,7 @@ app.get("/roles/:idRol", async (req, res) => {
 });
 
 //Actualizar informacion de un rol por ID
-app.put("/roles/:idRol", async (req, res) => {
+app.put("/rol/:idRol", async (req, res) => {
     const idRol = req.params.idRol;
     const nuevaInfo = req.body; // Suponiendo que los nuevos datos están en el cuerpo de la solicitud
     
@@ -286,7 +292,7 @@ app.put("/roles/:idRol", async (req, res) => {
 });
 
 //Eliminar un rol por ID
-app.delete("/roles/:idRol", async (req, res) => {
+app.delete("/rol/:idRol", async (req, res) => {
     const idRol = req.params.idRol;
     
     try {
@@ -303,7 +309,7 @@ app.delete("/roles/:idRol", async (req, res) => {
 });
 
 //Crear un usuario
-app.post("/usuarios", async (req, res) => {
+app.post("/usuario", async (req, res) => {
     const nuevoUsuario = req.body; // Suponiendo que los datos del nuevo usuario están en el cuerpo de la solicitud
     
     try {
@@ -316,7 +322,7 @@ app.post("/usuarios", async (req, res) => {
 });
 
 //Obtener un usuario por nombre
-app.get("/usuarios/:nombre", async (req, res) => {
+app.get("/usuario/:nombre", async (req, res) => {
     const nombre = req.params.nombre;
     
     try {
@@ -333,7 +339,7 @@ app.get("/usuarios/:nombre", async (req, res) => {
 });
 
 //Actualizar informacion de un usuario
-app.put("/usuarios/:idUsuario", async (req, res) => {
+app.put("/usuario/:idUsuario", async (req, res) => {
     const idUsuario = req.params.idUsuario;
     const nuevaInfo = req.body; // Suponiendo que los nuevos datos están en el cuerpo de la solicitud
     
@@ -351,7 +357,7 @@ app.put("/usuarios/:idUsuario", async (req, res) => {
 });
 
 //Eliminar usuario por ID
-app.delete("/usuarios/:idUsuario", async (req, res) => {
+app.delete("/usuario/:idUsuario", async (req, res) => {
     const idUsuario = req.params.idUsuario;
     
     try {
