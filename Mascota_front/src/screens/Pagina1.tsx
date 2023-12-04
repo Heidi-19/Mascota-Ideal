@@ -1,12 +1,10 @@
-/* eslint-disable prettier/prettier */
+/* eslint-disable react/self-closing-comp *//* eslint-disable prettier/prettier */
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Alert, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 
 
 export const Pagina1 = () => {
     return (
-        <View>
-            <Text>Pagina1</Text>
-        </View>
+       <Text >Hola</Text>
     )
 }

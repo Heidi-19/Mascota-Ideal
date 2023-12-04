@@ -1,12 +1,19 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, 
+  SafeAreaView, 
+  StyleSheet, 
+  Text, 
+  TouchableOpacity, 
+  View 
+} from 'react-native';
 
 const BienvenidaScreen = () => {
+  return(
     <SafeAreaView style={styles.container}>
     <View style={styles.hero}>
       <Image
-        source={require('../assets/pantalla3.png')}
+        source={{uri:'https://github.com/Heidi-19/Mascota-Ideal/blob/main/Mascota_front/src/assets/pantalla3.png?raw=true'}}
         style={styles.heroImage}
         resizeMode="contain"
       />
@@ -25,7 +32,7 @@ const BienvenidaScreen = () => {
         </Text>
       </View>
 
-      <View style={ { marginVertical: 30 } }/>
+     
 
       <TouchableOpacity
         onPress={() => {
@@ -36,7 +43,7 @@ const BienvenidaScreen = () => {
         </View>
         </TouchableOpacity>
 
-        
+        <View style={ { marginVertical: 8 } }/>
         <TouchableOpacity
         onPress={() => {
           // handle onPress
@@ -47,13 +54,14 @@ const BienvenidaScreen = () => {
       </TouchableOpacity>
     </View>
   </SafeAreaView>
+  )
 }
+
 
 
 const styles = StyleSheet.create({
     container: {
       backgroundColor:'#d8dffe',
-      flex: 1,
     },
     hero: {
       backgroundColor: '#5856a9',
@@ -63,10 +71,10 @@ const styles = StyleSheet.create({
     },
     heroImage: {
       width: '100%',
-      height: 400,
+      height: 459,
     },
     content: {
-      flex: 1,
+
       justifyContent: 'space-between',
       paddingVertical: 24,
       paddingHorizontal: 24,
@@ -102,10 +110,12 @@ const styles = StyleSheet.create({
       fontWeight: '400',
       color: '#9992a7',
       textAlign: 'center',
+      //distancia entre el texto y los botones
+      paddingBottom: 40,
     },
     button: {
       backgroundColor: '#56409e',
-      paddingVertical: 12,
+      paddingVertical: 10,
       paddingHorizontal: 14,
       alignItems: 'center',
       justifyContent: 'center',

@@ -1,16 +1,7 @@
 /* eslint-disable prettier/prettier */
-import React, { useState } from 'react';
-import {
-    StyleSheet,
-    Switch,
-    SafeAreaView,
-    ScrollView,
-    View,
-    Text,
-    TouchableOpacity,
-    Image
-} from 'react-native';
-import FeatherIcon from 'react-native-vector-icons/Ionicons';
+import React, { useState } from 'react'
+import { Image, SafeAreaView, ScrollView, StyleSheet, Switch, Text, TouchableOpacity, View } from 'react-native'
+import Icon from 'react-native-vector-icons/Ionicons';
 
 
 const SECTIONS = [
@@ -46,7 +37,7 @@ export const SettingsScreen = () => {
     });
 
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: '#F6F6FE' }}>
+        <SafeAreaView style={{ backgroundColor: '#F6F6FE' }}>
             <ScrollView contentContainerStyle={styles.container}>
                 <View style={styles.header}>
                     <Text style={styles.title}>Ajustes</Text>
@@ -56,7 +47,7 @@ export const SettingsScreen = () => {
                 <View style={styles.profile}>
                     <Image
                         alt=""
-                        source={require('../assets/perfil.jpg')}
+                        source={{ uri: 'https://github.com/Heidi-19/Mascota-Ideal/blob/main/Mascota_front/src/assets/perfil.jpg?raw=true' }}
                         style={styles.profileAvatar}
                     />
 
@@ -71,7 +62,7 @@ export const SettingsScreen = () => {
                         <View style={styles.profileAction}>
                             <Text style={styles.profileActionText}>Editar Perfil</Text>
 
-                            <FeatherIcon name='create-outline' color="#fff" size={16} />
+                            <Icon name='create-outline' color="#fff" size={16} />
                         </View>
                     </TouchableOpacity>
                 </View>
@@ -91,13 +82,13 @@ export const SettingsScreen = () => {
                                         styles.rowWrapper,
                                         index === 0 && { borderTopWidth: 0 },
                                     ]}
-                                    >
+                                >
                                     <TouchableOpacity
                                         onPress={() => {
                                             //handleOnPress
                                         }}>
                                         <View style={styles.row}>
-                                            <FeatherIcon
+                                            <Icon
                                                 name={icon}
                                                 color="#616161"
                                                 size={22}
@@ -107,7 +98,7 @@ export const SettingsScreen = () => {
                                             <Text style={styles.rowLabel}> {label}</Text>
 
                                             <View style={styles.rowSpacer} />
-                                            
+
 
                                             {type === 'select' && (
                                                 <Text style={styles.rowValue}>{form[id]}</Text>
@@ -121,7 +112,7 @@ export const SettingsScreen = () => {
                                             )}
 
                                             {['select', 'link'].includes(type) && (
-                                                <FeatherIcon
+                                                <Icon
                                                     name='chevron-forward-outline'
                                                     color="#ababab"
                                                     size={22}

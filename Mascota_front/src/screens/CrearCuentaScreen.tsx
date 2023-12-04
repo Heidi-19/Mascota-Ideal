@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react'
-import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { Alert, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+
 //import { styles } from '../themes/appThemes';
 
 
@@ -18,7 +18,7 @@ export const CrearCuentaScreen = () => {
                     <Text style={styles.headerText}>Bienvenido a Mascota Ideal</Text>
                     <Image
                         style={styles.logo}
-                        source={require('../Mascota_front/src/assets/logocat-dog.jpg')}
+                        source={{uri:'https://github.com/Heidi-19/Mascota-Ideal/blob/main/Mascota_front/src/assets/logocat-dog.jpg?raw=true'}}
                     />
                 </View>
                 <View style={styles.box}>
@@ -76,8 +76,8 @@ const styles = StyleSheet.create({
 
     logo: {
         borderRadius: 1000,
-        width: 200,
-        height: 200,
+        width: 280,
+        height: 280,
     },
     headerText: {
         fontSize: 25,

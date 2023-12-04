@@ -1,7 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text, ScrollView, Image, StyleSheet, Alert } from 'react-native';
-import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
+import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, Alert, ScrollView } from 'react-native';
 
 export const AgregarMascotaScreen = () => {
     const handlemascota = () => {
@@ -15,7 +14,7 @@ export const AgregarMascotaScreen = () => {
                     <Text style={styles.headerText}>Bienvenido a Mascota Ideal</Text>
                     <Image
                         style={styles.logo}
-                        source={require('../assets/logocat-dog.jpg')}
+                        source={{uri: 'https://github.com/Heidi-19/Mascota-Ideal/blob/main/Mascota_front/src/assets/logocat-dog.jpg?raw=true'}}
                     />
                 </View>
                 <View style={styles.box}>
