@@ -3,15 +3,21 @@ import React from 'react';
 import { View, Text, TextInput, ScrollView, Image, TouchableOpacity} from 'react-native';
 import { StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import StackNav from '../navegacion/StackNav';
+import { StackNavigationProp } from '@react-navigation/stack';
 
-export const PrincipalScreen: React.FC=() => {
+interface PrincipalProps {
+  navigation: StackNavigationProp<any, 'Principal'>;
+}
+
+export const PrincipalScreen: React.FC<PrincipalProps> = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {/* Encabezado */}
       <View style={styles.header}>
-        <Icon name="paw-outline" size={24} color="#7A6ABA" />
-        <Text style={styles.title}>MASCOTA IDEAL</Text>
+        <Icon name="paw-outline" size={24} color="#7A6ABA" 
+        onPress={() => navigation.navigate('User')}/>
+        <Text style={styles.title}
+        >MASCOTA IDEAL</Text>
       </View>
 
       {/* Buscador */}
@@ -60,7 +66,7 @@ export const PrincipalScreen: React.FC=() => {
         </TouchableOpacity>
 
       </View>
-
+      
       <View style={styles.container}>
         {/* Deslizador vertical de mascotas */}
         <ScrollView style={styles.verticalSlider}>

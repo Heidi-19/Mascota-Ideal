@@ -1,10 +1,14 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react'
-import { Button, Image, SafeAreaView, ScrollView, StyleSheet, Switch, Text, TouchableOpacity, View } from 'react-native'
+import { Image, SafeAreaView, ScrollView, StyleSheet, Switch, Text, TouchableOpacity, View } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons';
-import { DrawerNavigationProp } from '@react-navigation/drawer';
+
 import { StackNavigationProp } from '@react-navigation/stack';
 
+
+interface SettingsProps {
+    navigation: StackNavigationProp<any, 'SettingsScreen'>;
+  }
 
 const SECTIONS = [
     {
@@ -31,7 +35,7 @@ const SECTIONS = [
     },
 ];
 
-export const SettingsScreen: React.FC = ({ }) => {
+export const SettingsScreen: React.FC<SettingsProps> = ({ navigation }) => {
     const [form, setForm] = useState({
         language: 'Español',
         darkMode: true,
@@ -43,10 +47,6 @@ export const SettingsScreen: React.FC = ({ }) => {
             <ScrollView contentContainerStyle={styles.container}>
                 <View style={styles.header}>
                     <Text style={styles.title}>Ajustes</Text>
-                    <Button
-        title="Abrir Drawer"
-        onPress={() => navigation.openDrawer()}
-      />
                     <Text style={styles.subtitle}> Actualiza tus preferencias</Text>
                 </View>
 
@@ -61,16 +61,6 @@ export const SettingsScreen: React.FC = ({ }) => {
                     <Text style={styles.profileName}>John 117</Text>
 
                     <Text style={styles.profileEmail}>masterchief@mail.com</Text>
-                    <TouchableOpacity
-                        onPress={() => {
-                            // handle onPress
-                        }}>
-                        <View style={styles.profileAction}>
-                            <Text style={styles.profileActionText}>Editar Perfil</Text>
-
-                            <Icon name='create-outline' color="#fff" size={16} />
-                        </View>
-                    </TouchableOpacity>
                 </View>
 
 

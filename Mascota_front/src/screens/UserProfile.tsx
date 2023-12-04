@@ -1,14 +1,18 @@
 /* eslint-disable prettier/prettier */
 
 // UserProfile.tsx
+import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+interface UserProps {
+    navigation: StackNavigationProp<any, 'User'>;
+  } 
 // Definir una interfaz para el objeto 'user'
 
 
-export const UserProfile = () => {
+export const UserProfile: React.FC<UserProps> = ({ navigation }) => {
     return (
         <View style={styles.profile}>
             <Image
@@ -22,9 +26,7 @@ export const UserProfile = () => {
 
             <Text style={styles.profileEmail}>masterchief@mail.com</Text>
             <TouchableOpacity
-                onPress={() => {
-                    // handle onPress
-                }}>
+                onPress={() => navigation.navigate('Settings')}>
                 <View style={styles.profileAction}>
                     <Text style={styles.profileActionText}>Editar Perfil</Text>
 
