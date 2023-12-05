@@ -79,10 +79,7 @@ export const DetallesScreen: React.FC<DetallesProps> = ({ }) => {
                     </View>
 
                     <View style={styles.headerRow}>
-                        <View style={styles.headerStars}>
-                            <Text style={styles.headerStarsText}>20 reviews</Text>
-                        </View>
-                        <Text style={styles.headerDistance}>4.6 miles</Text>
+                        <Text style={styles.headerDistance}>4.6 Km</Text>
                     </View>
                 </View>
 
