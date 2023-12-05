@@ -5,6 +5,8 @@ import { Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View 
 
 //import { styles } from '../themes/appThemes';
 
+//const apiUrl = 'http://192.168.1.105:8080';
+
 interface CrearCuentaProps {
     navigation: StackNavigationProp<any, 'Crear Cuenta'>;
   }
@@ -61,6 +63,7 @@ export const CrearCuentaScreen: React.FC<CrearCuentaProps> = ({ navigation }) =>
         </ScrollView>
     );
 };
+
 
 const styles = StyleSheet.create({
     container: {

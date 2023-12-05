@@ -6,6 +6,8 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+//const apiUrl = 'http://192.168.1.105:8080';
+
 interface UserProps {
     navigation: StackNavigationProp<any, 'User'>;
   } 
