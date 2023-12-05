@@ -9,7 +9,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { CrearCuentaScreen } from './src/screens/CrearCuentaScreen';
 import { SettingsScreen } from './src/screens/SettingScreen';
 import BienvenidaScreen from './src/screens/BienvenidaScreen';
-
+import { DetallesScreen } from './src/screens/DetallesScreen';
 import { PrincipalScreen } from './src/screens/PrincipalScreen';
 import { UserProfile } from './src/screens/UserProfile';
 import Pagina2 from './src/screens/Pagina2';
@@ -25,6 +25,7 @@ const App: React.FC = () => {
   return(
     <NavigationContainer>
       <Stack.Navigator initialRouteName='BienvenidaScreen'>
+        <Stack.Screen name="Detalles" component={DetallesScreen}/>
         <Stack.Screen name="User" component={UserProfile} />
         <Stack.Screen name="Principal" component={PrincipalScreen}/>
         <Stack.Screen name="BienvenidaScreen" component={BienvenidaScreen}/>

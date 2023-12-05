@@ -12,6 +12,7 @@ interface PrincipalProps {
 export const PrincipalScreen: React.FC<PrincipalProps> = ({ navigation }) => {
   return (
     <View style={styles.container}>
+      <ScrollView>
       {/* Encabezado */}
       <View style={styles.header}>
         <Icon 
@@ -22,7 +23,7 @@ export const PrincipalScreen: React.FC<PrincipalProps> = ({ navigation }) => {
         <Text style={styles.title}>
         <Icon 
         name="paw-outline" 
-        size={24} 
+        size={20} 
         color="#7A6ABA" //onPress={}
          />  MASCOTA IDEAL</Text>
       </View>
@@ -73,23 +74,23 @@ export const PrincipalScreen: React.FC<PrincipalProps> = ({ navigation }) => {
         </TouchableOpacity>
 
       </View>
-      
       <View style={styles.container}>
         {/* Deslizador vertical de mascotas */}
         <ScrollView style={styles.verticalSlider}>
           <View style={styles.row}>
+          <TouchableOpacity style={styles.petImageContainer}
+          onPress={() => navigation.navigate('Detalles')}>
+              <View style={styles.innerPetImageContainer}>
+                <Image source={require('../assets/loki.jpg')} style={styles.petImage} />
+              </View>
+              <Text style={styles.petDescription}>Loki</Text>
+            </TouchableOpacity>
+
             <TouchableOpacity style={styles.petImageContainer}>
               <View style={styles.innerPetImageContainer}>
                 <Image source={require('../assets/cat1.png')} style={styles.petImage} />
               </View>
               <Text style={styles.petDescription}>Heidi</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity style={styles.petImageContainer}>
-              <View style={styles.innerPetImageContainer}>
-                <Image source={require('../assets/cat2.png')} style={styles.petImage} />
-              </View>
-              <Text style={styles.petDescription}>Pablo</Text>
             </TouchableOpacity>
           </View>
 
@@ -100,13 +101,19 @@ export const PrincipalScreen: React.FC<PrincipalProps> = ({ navigation }) => {
               </View>
               <Text style={styles.petDescription}>Nieve</Text>
             </TouchableOpacity>
-
+            <TouchableOpacity style={styles.petImageContainer}>
+              <View style={styles.innerPetImageContainer}>
+                <Image source={require('../assets/cat2.png')} style={styles.petImage} />
+              </View>
+              <Text style={styles.petDescription}>Pablo</Text>
+            </TouchableOpacity>
             {/* Agrega más botones de mascotas según sea necesario */}
           </View>
 
           {/* Agrega más filas según sea necesario */}
         </ScrollView>
       </View>
+      </ScrollView>
     </View>
   );
 };
@@ -125,7 +132,7 @@ export const styles = StyleSheet.create({
     marginBottom: 16,
   },
   title: {
-    fontSize: 20,
+    fontSize: 23,
     fontWeight: 'bold',
     color: '#7A6ABA',
     textAlign: 'center',
@@ -174,7 +181,7 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     textTransform: 'uppercase',
     fontWeight: 'bold',
-    color: '#7A6ABA'
+    color: '#7A6ABA',
   },
   verticalSlider: {
     flex: 1,
@@ -185,6 +192,7 @@ export const styles = StyleSheet.create({
     borderRadius: 8,
   },
   petDescription: {
+    color:'#7A6ABA',
     marginTop: 8,
     textAlign: 'center',
     fontWeight: 'bold',

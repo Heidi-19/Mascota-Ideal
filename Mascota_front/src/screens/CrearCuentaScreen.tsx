@@ -50,7 +50,17 @@ export const CrearCuentaScreen: React.FC<CrearCuentaProps> = ({ navigation }) =>
                     <TextInput
                         style={styles.input}
                         placeholderTextColor='black'
-                        placeholder="Direccion"
+                        placeholder="Estado"
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholderTextColor='black'
+                        placeholder="Ciudad"
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholderTextColor='black'
+                        placeholder="Colonia"
                     />
                     <TouchableOpacity style={styles.button}
                         onPress={() => navigation.navigate('Principal')}>
