@@ -7,7 +7,7 @@ import { Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View 
 
 interface CrearCuentaProps {
     navigation: StackNavigationProp<any, 'Crear Cuenta'>;
-  }
+}
 
 export const CrearCuentaScreen: React.FC<CrearCuentaProps> = ({ navigation }) => {
     return (
@@ -17,7 +17,7 @@ export const CrearCuentaScreen: React.FC<CrearCuentaProps> = ({ navigation }) =>
                     <Text style={styles.headerText}>Bienvenido a Mascota Ideal</Text>
                     <Image
                         style={styles.logo}
-                        source={{uri:'https://github.com/Heidi-19/Mascota-Ideal/blob/main/Mascota_front/src/assets/logocat-dog.jpg?raw=true'}}
+                        source={{ uri: 'https://github.com/Heidi-19/Mascota-Ideal/blob/main/Mascota_front/src/assets/logocat-dog.jpg?raw=true' }}
                     />
                 </View>
                 <View style={styles.box}>
@@ -52,9 +52,9 @@ export const CrearCuentaScreen: React.FC<CrearCuentaProps> = ({ navigation }) =>
                         placeholderTextColor='black'
                         placeholder="Direccion"
                     />
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.buttonText}
-                         onPress={() => navigation.navigate('Principal')}>Registrarse</Text>
+                    <TouchableOpacity style={styles.button}
+                        onPress={() => navigation.navigate('Principal')}>
+                        <Text style={styles.buttonText}>Registrarse</Text>
                     </TouchableOpacity>
                 </View>
             </View>

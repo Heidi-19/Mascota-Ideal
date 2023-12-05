@@ -14,10 +14,17 @@ export const PrincipalScreen: React.FC<PrincipalProps> = ({ navigation }) => {
     <View style={styles.container}>
       {/* Encabezado */}
       <View style={styles.header}>
-        <Icon name="paw-outline" size={24} color="#7A6ABA" 
+        <Icon 
+        name="person-outline" 
+        size={24} 
+        color="#7A6ABA" 
         onPress={() => navigation.navigate('User')}/>
-        <Text style={styles.title}
-        >MASCOTA IDEAL</Text>
+        <Text style={styles.title}>
+        <Icon 
+        name="paw-outline" 
+        size={24} 
+        color="#7A6ABA" //onPress={}
+         />  MASCOTA IDEAL</Text>
       </View>
 
       {/* Buscador */}

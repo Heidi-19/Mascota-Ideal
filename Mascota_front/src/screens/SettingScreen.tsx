@@ -20,18 +20,19 @@ const SECTIONS = [
         ],
     },
     {
+        header: 'Contenido',
+        items: [
+            { id: 'add', icon: "add-circle-outline", label: 'Agregar Mascota', type: 'link' },
+            { id: 'search', icon: 'search-outline', label: 'Buscar Mascota', type: 'link' },
+        ],
+    },
+    {
         header: 'Ayuda',
         items: [
             { id: 'bug', icon: 'flag-outline', label: 'Reportar Bug', type: 'link' },
             { id: 'contact', icon: 'mail-outline', label: 'Contactanos', type: 'link' },
-        ],
-    },
-    {
-        header: 'Contenido',
-        items: [
-            { id: 'save', icon: 'save-outline', label: 'Guardado', type: 'link' },
-            { id: 'download', icon: 'download-outline', label: 'Descargas', type: 'link' },
-        ],
+            { id: 'delete', icon: 'trash-outline', label: 'Eliminar cuenta', type: 'link'},
+        ],   
     },
 ];
 
