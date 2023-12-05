@@ -15,6 +15,10 @@ import { UserProfile } from './src/screens/UserProfile';
 import Pagina2 from './src/screens/Pagina2';
 import { Pagina1 } from './src/screens/Pagina1';
 
+// Reemplaza 'tu-direccion-ip' con tu dirección IP local
+const apiUrl = 'http://192.168.1.105:8080';
+
+
 const Stack = createStackNavigator();
 
 const App: React.FC = () => {
