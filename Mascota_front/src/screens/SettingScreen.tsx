@@ -87,11 +87,7 @@ export const SettingsScreen: React.FC<SettingsProps> = ({ navigation }) => {
                                             <View style={styles.rowSpacer} />
 
 
-                                            {type === 'select' && (
-                                                <Text style={styles.rowValue}>{form[id]}</Text>
-                                            )}
-
-                                            {type === 'toogle' && (
+                                            {type === 'toogle' && (//activar o desactivar botones de modo oscuro y wifi
                                                 <Switch
                                                     value={form[id]}
                                                     onValueChange={(value) => setForm({ ...form, [id]: value })}
