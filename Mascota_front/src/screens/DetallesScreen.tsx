@@ -16,7 +16,7 @@ import { UserProfile } from './UserProfile';
 interface DetallesProps {
     navigation: StackNavigationProp<any, 'Detalles'>;
 }
-
+//Pantalla del perfil de la mascota
 export const DetallesScreen: React.FC<DetallesProps> = ({ }) => {
     const [value, setValue] = React.useState(0);
 

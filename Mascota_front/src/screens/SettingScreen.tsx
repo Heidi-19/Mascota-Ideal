@@ -11,6 +11,9 @@ interface SettingsProps {
     navigation: StackNavigationProp<any, 'SettingsScreen'>;
   }
 
+/*
+* Secciones de la pantalla de settings
+*/
 const SECTIONS = [
     {
         header: 'Preferencias',
@@ -114,6 +117,9 @@ export const SettingsScreen: React.FC<SettingsProps> = ({ navigation }) => {
     );
 }
 
+/*
+*Estilos que se utilizaran
+*/
 const styles = StyleSheet.create({
     container: {
         paddingVertical: 24,

@@ -9,6 +9,7 @@ interface CrearCuentaProps {
     navigation: StackNavigationProp<any, 'Crear Cuenta'>;
 }
 
+//Pantalla de crear cuenta
 export const CrearCuentaScreen: React.FC<CrearCuentaProps> = ({ navigation }) => {
     return (
         <ScrollView>
@@ -22,46 +23,55 @@ export const CrearCuentaScreen: React.FC<CrearCuentaProps> = ({ navigation }) =>
                 </View>
                 <View style={styles.box}>
                     <Text style={styles.title}>Crea una nueva cuenta</Text>
+                    {/*Input para ingresar el nombre*/}
                     <TextInput
                         style={styles.input}
                         placeholderTextColor='black'
                         placeholder="Nombre Completo"
                     />
+                    {/*Input para ingresar el Apellido paterno*/}
                     <TextInput
                         style={styles.input}
                         placeholderTextColor='black'
                         placeholder="Apellido Paterno"
                     />
+                    {/*Input para ingresar el Apellido Materno*/}
                     <TextInput
                         style={styles.input}
                         placeholderTextColor='black'
                         placeholder="Apellido Materno"
                     />
+                    {/*Input para ingresar la edad*/}
                     <TextInput
                         style={styles.input}
                         placeholderTextColor='black'
                         placeholder="Edad"
                     />
+                    {/*Input para ingresar el sexo*/}
                     <TextInput
                         style={styles.input}
                         placeholderTextColor='black'
                         placeholder="Sexo"
                     />
+                    {/*Input para ingresar el Estado*/}
                     <TextInput
                         style={styles.input}
                         placeholderTextColor='black'
                         placeholder="Estado"
                     />
+                    {/*Input para ingresar la ciudad*/}
                     <TextInput
                         style={styles.input}
                         placeholderTextColor='black'
                         placeholder="Ciudad"
                     />
+                    {/*Input para ingresar la colonia*/}
                     <TextInput
                         style={styles.input}
                         placeholderTextColor='black'
                         placeholder="Colonia"
                     />
+                    {/*Boton para registrarse y redirigir a la pantalla Principal*/}
                     <TouchableOpacity style={styles.button}
                         onPress={() => navigation.navigate('Principal')}>
                         <Text style={styles.buttonText}>Registrarse</Text>

@@ -21,8 +21,8 @@ export const UserProfile: React.FC<UserProps> = ({ navigation }) => {
                 if (!response.ok) {
                     throw new Error(`Error ${response.status}: ${response.statusText}`);
                 }
-                const sesionData = await response.json();
-                setSesion(sesionData);
+                const sesionData = await response.json();//carga los datos de la sesión en una constante
+                setSesion(sesionData);//carga la sesión activa
             } catch (error) {
                 console.error('Error al obtener la sesión:', error);
             }
@@ -35,11 +35,11 @@ export const UserProfile: React.FC<UserProps> = ({ navigation }) => {
         <View style={styles.profile}>
             <Image
                 alt=""
-                source={{ uri: sesion.imagen || 'https://github.com/Heidi-19/Mascota-Ideal/blob/main/Mascota_front/src/assets/perfil.jpg?raw=true' }}
+                source={{ uri: sesion.imagen || 'https://github.com/Heidi-19/Mascota-Ideal/blob/main/Mascota_front/src/assets/perfil.jpg?raw=true' }} //obtiene una imagen de la ruta especificada
                 style={styles.profileAvatar}
             />
-
-            <Text style={styles.profileName}>{sesion.nombreUsuario || 'Nombre de la Sesión'}</Text>
+            
+            <Text style={styles.profileName}>{sesion.nombreUsuario || 'Nombre de la Sesión'}</Text> 
             <Text style={styles.profileEmail}>{sesion.email || 'Descripción de la Sesión'}</Text>
 
             <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
@@ -52,6 +52,9 @@ export const UserProfile: React.FC<UserProps> = ({ navigation }) => {
     );
 };
 
+/*
+*Estilos que se utilizaran
+*/
 const styles = StyleSheet.create({
     profileAvatar: {
         width: 150,
