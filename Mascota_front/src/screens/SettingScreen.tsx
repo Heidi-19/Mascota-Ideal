@@ -4,6 +4,7 @@ import { Image, SafeAreaView, ScrollView, StyleSheet, Switch, Text, TouchableOpa
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import { StackNavigationProp } from '@react-navigation/stack';
+import { UserProfile } from './UserProfile';
 
 
 interface SettingsProps {
@@ -51,18 +52,7 @@ export const SettingsScreen: React.FC<SettingsProps> = ({ navigation }) => {
                     <Text style={styles.subtitle}> Actualiza tus preferencias</Text>
                 </View>
 
-                <View style={styles.profile}>
-                    <Image
-                        alt=""
-                        source={{ uri: 'https://github.com/Heidi-19/Mascota-Ideal/blob/main/Mascota_front/src/assets/perfil.jpg?raw=true' }}
-                        style={styles.profileAvatar}
-                    />
-
-
-                    <Text style={styles.profileName}>John 117</Text>
-
-                    <Text style={styles.profileEmail}>masterchief@mail.com</Text>
-                </View>
+                <UserProfile/>
 
 
                 {SECTIONS.map(({ header, items }) => (

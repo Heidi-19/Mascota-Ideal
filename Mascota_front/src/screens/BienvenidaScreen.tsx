@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
       color: '#9992a7',
       textAlign: 'center',
       //distancia entre el texto y los botones
-      paddingBottom: 10,
+      paddingBottom: 37,
     },
     button: {
       backgroundColor: '#56409e',

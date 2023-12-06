@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 // UserProfile.tsx
 import { StackNavigationProp } from '@react-navigation/stack';
 import React, { useEffect, useState } from 'react';
@@ -53,8 +54,8 @@ export const UserProfile: React.FC<UserProps> = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     profileAvatar: {
-        width: 160,
-        height: 160,
+        width: 150,
+        height: 150,
         borderRadius: 9999,
     },
     profileName: {
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
     },
     profile: {
         //se quita el min cuando se ponga algo mas de titulo
-        minHeight: 870,
+        //minHeight: 870,
         padding: 20,
         flexDirection: 'column',
         alignItems: 'center',

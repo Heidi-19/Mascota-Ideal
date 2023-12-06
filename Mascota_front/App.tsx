@@ -28,7 +28,7 @@ const App: React.FC = () => {
         <Stack.Screen name="Detalles" component={DetallesScreen}/>
         <Stack.Screen name="User" component={UserProfile} />
         <Stack.Screen name="Principal" component={PrincipalScreen}/>
-        <Stack.Screen name="BienvenidaScreen" component={BienvenidaScreen}/>
+        <Stack.Screen name="BienvenidaScreen" options={{headerShown:false}} component={BienvenidaScreen}/>
         <Stack.Screen name="Pagina2" component={Pagina2} />
         <Stack.Screen name="Settings" component={SettingsScreen} />
         <Stack.Screen name="Pagina1" component={Pagina1} />
