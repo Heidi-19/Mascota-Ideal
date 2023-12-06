@@ -72,7 +72,6 @@ export const CrearCuentaScreen: React.FC<CrearCuentaProps> = ({ navigation }) =>
     );
 };
 
-
 const styles = StyleSheet.create({
     container: {
         justifyContent: 'flex-start',

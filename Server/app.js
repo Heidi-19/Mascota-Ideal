@@ -304,9 +304,10 @@ app.delete("/roles/:idRol", async (req, res) => {
 
 //Crear un usuario
 app.post("/usuarios", async (req, res) => {
-    const nuevoUsuario = req.body; // Suponiendo que los datos del nuevo usuario están en el cuerpo de la solicitud
-    
+    const nuevoUsuario = req.body;
+
     try {
+        // Suponiendo que tus datos de usuario incluyen nombre, apellidoPaterno, apellidoMaterno, edad, y sexo
         const idNuevoUsuario = await crearUsuario(nuevoUsuario);
         res.status(201).send({ id: idNuevoUsuario, mensaje: 'Usuario creado correctamente' });
     } catch (error) {
