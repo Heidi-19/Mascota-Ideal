@@ -21,8 +21,8 @@ export const DetallesScreen: React.FC<DetallesProps> = ({ }) => {
     const [value, setValue] = React.useState(0);
 
     return (
-        <ScrollView>
         <View style={{ flex: 1, backgroundColor: '#F9F9F9' }}>
+        <ScrollView>
             <View style={styles.actions}>
                 <SafeAreaView>
                     <View style={styles.tabs}>
@@ -127,8 +127,8 @@ export const DetallesScreen: React.FC<DetallesProps> = ({ }) => {
                     </TouchableOpacity>
                 </View>
             </View>
+         </ScrollView>
         </View>
-        </ScrollView>
     );
 }
 
