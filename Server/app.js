@@ -34,9 +34,9 @@ import {
 } from "./database.js";
 
 const corsOptions = {
-    origin: "http://127.0.0.1:5173", //specify the allowed origin
-    methods: ["POST","GET"], // specify the allowed method
-    credentials: true, // allow sending credentials (cookies, authentification)
+    origin: "*", // Permitir todas las solicitudes temporales
+    methods: ["POST", "GET"],
+    credentials: true,
 };
 
 const app = express();

@@ -1,37 +1,49 @@
-/* eslint-disable prettier/prettier */
-
 // UserProfile.tsx
 import { StackNavigationProp } from '@react-navigation/stack';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-//const apiUrl = 'http://192.168.1.105:8080';
+//const apiUrl = 'http://192.168.1.104:8080';
 
 interface UserProps {
     navigation: StackNavigationProp<any, 'User'>;
-  } 
-// Definir una interfaz para el objeto 'user'
-
+}
 
 export const UserProfile: React.FC<UserProps> = ({ navigation }) => {
+    const [sesion, setSesion] = useState<any>({});
+
+    useEffect(() => {
+        const fetchSesionData = async () => {
+            try {
+                const response = await fetch('http://192.168.1.104:8080/sesion/1'); // Reemplaza con la URL de tu API y el ID de la sesión que deseas obtener
+                if (!response.ok) {
+                    throw new Error(`Error ${response.status}: ${response.statusText}`);
+                }
+                const sesionData = await response.json();
+                setSesion(sesionData);
+            } catch (error) {
+                console.error('Error al obtener la sesión:', error);
+            }
+        };
+
+        fetchSesionData();
+    }, []);
+
     return (
         <View style={styles.profile}>
             <Image
                 alt=""
-                source={{ uri: 'https://github.com/Heidi-19/Mascota-Ideal/blob/main/Mascota_front/src/assets/perfil.jpg?raw=true' }}
+                source={{ uri: sesion.imagen || 'https://github.com/Heidi-19/Mascota-Ideal/blob/main/Mascota_front/src/assets/perfil.jpg?raw=true' }}
                 style={styles.profileAvatar}
             />
 
+            <Text style={styles.profileName}>{sesion.nombreUsuario || 'Nombre de la Sesión'}</Text>
+            <Text style={styles.profileEmail}>{sesion.email || 'Descripción de la Sesión'}</Text>
 
-            <Text style={styles.profileName}>John 117</Text>
-
-            <Text style={styles.profileEmail}>masterchief@mail.com</Text>
-            <TouchableOpacity
-                onPress={() => navigation.navigate('Settings')}>
+            <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
                 <View style={styles.profileAction}>
                     <Text style={styles.profileActionText}>Editar Perfil</Text>
-
                     <Icon name='create-outline' color="#fff" size={16} />
                 </View>
             </TouchableOpacity>
