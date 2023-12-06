@@ -17,7 +17,7 @@ export const UserProfile: React.FC<UserProps> = ({ navigation }) => {
     useEffect(() => {
         const fetchSesionData = async () => {
             try {
-                const response = await fetch('http://192.168.1.104:8080/sesion/1'); // Reemplaza con la URL de tu API y el ID de la sesión que deseas obtener
+                const response = await fetch('http://192.168.20.64:8080/sesion/3'); // Reemplaza con la URL de tu API y el ID de la sesión que deseas obtener
                 if (!response.ok) {
                     throw new Error(`Error ${response.status}: ${response.statusText}`);
                 }
