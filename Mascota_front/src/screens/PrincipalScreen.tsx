@@ -1,11 +1,11 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text, TextInput, ScrollView, Image, TouchableOpacity} from 'react-native';
+import { View, Text, TextInput, ScrollView, Image, TouchableOpacity} from 'react-native'; //carga los componentes View, Text, TextInput, ScrollView, Image y Touchable para poder utilizarlos despues
 import { StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { StackNavigationProp } from '@react-navigation/stack';
 
-interface PrincipalProps {
+interface PrincipalProps { //Prop para la navegación
   navigation: StackNavigationProp<any, 'Principal'>;
 }
 
@@ -118,6 +118,9 @@ export const PrincipalScreen: React.FC<PrincipalProps> = ({ navigation }) => {
   );
 };
 
+/*
+* Estilos que se utilizaran
+*/
 export const styles = StyleSheet.create({
   container: {
     padding: 16,

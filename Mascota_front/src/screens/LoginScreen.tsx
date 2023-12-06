@@ -10,6 +10,7 @@ interface LoginProps {
 }
 
 const LoginScreen: React.FC<LoginProps> = ({ navigation }) => {
+  //Definición de constantes username y password asignandoles usestate
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -26,6 +27,7 @@ const LoginScreen: React.FC<LoginProps> = ({ navigation }) => {
       </View>
       <View style={styles.box}>
         <Text style={styles.title}>Inicio de Sesión</Text>
+        {/*Input para ingresar el nombre de usuario*/}
         <TextInput
           style={styles.input}
           placeholderTextColor='black'
@@ -33,6 +35,7 @@ const LoginScreen: React.FC<LoginProps> = ({ navigation }) => {
           onChangeText={(text) => setUsername(text)}
           value={username}
         />
+        {/*Input para ingresar la contraseña */}
         <TextInput
           style={styles.input}
           placeholderTextColor='black'
@@ -41,10 +44,12 @@ const LoginScreen: React.FC<LoginProps> = ({ navigation }) => {
           value={password}
           secureTextEntry
         />
+        {/*Boton para iniciar sesión*/}
         <TouchableOpacity style={styles.button}
         onPress={() => navigation.navigate('Principal')}>
           <Text style={styles.buttonText}>Iniciar Sesión</Text>
         </TouchableOpacity>
+        {/*Hipervinculo para acceder a la pantalla CrearCuenta */}
         <TouchableOpacity style={styles.createAccountLink}  
         onPress={() => navigation.navigate('CrearCuenta')}>
           <Text style={styles.createAccountText}>¿No tienes una cuenta? Crear cuenta</Text>
