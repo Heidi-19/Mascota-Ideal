@@ -14,8 +14,6 @@ const LoginScreen: React.FC<LoginProps> = ({ navigation }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-
-
   return (
     <View style={styles.container}>
       <View style={styles.header}>
